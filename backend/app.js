@@ -19,7 +19,7 @@ const user = require("./routes/user");
 app.use("/api/v1", post);
 app.use("/api/v1", user);
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV == "production") {
 	const path = require("path");
 
 	app.use(express.static(path.resolve(__dirname, "../frontend/build")));
